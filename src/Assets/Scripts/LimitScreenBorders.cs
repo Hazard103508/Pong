@@ -18,7 +18,7 @@ public class LimitScreenBorders : MonoBehaviour
         SetScreenBoundPosition();
     }
 
-    void Update()
+    void LateUpdate()
     {
         CheckBound();
     }
