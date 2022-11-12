@@ -3,6 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public PlayerType playerType;
+    public int score;
 
     void Awake()
     {

@@ -1,17 +1,17 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using static LimitScreenBorders;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class LimitScreenBorders : MonoBehaviour
 {
-    private Borders<float> borders;
+    private Borders<float> bordersIn;
+    private Borders<float> bordersOut;
 
     public SpriteRenderer spriteRenderer;
     public Borders<bool> bordersToLimit;
-    public UnityEvent<ScreenBorders> onBorderReached;
+    public UnityEvent<ScreenBorders> onBorderInReached;
+    public UnityEvent<ScreenBorders> onBorderOutReached;
 
     void Awake()
     {
@@ -20,33 +20,43 @@ public class LimitScreenBorders : MonoBehaviour
 
     void LateUpdate()
     {
-        CheckBound();
+        CheckBoundIn();
+        CheckBoundOut();
     }
 
-    private void CheckBound()
+    private void CheckBoundIn()
     {
         var pos = transform.position;
-        if (bordersToLimit.left && pos.x < borders.left)
+        if (bordersToLimit.left && pos.x < bordersIn.left)
         {
-            transform.position = new Vector3(borders.left, transform.position.y);
-            onBorderReached.Invoke(ScreenBorders.Left);
+            transform.position = new Vector3(bordersIn.left, transform.position.y);
+            onBorderInReached.Invoke(ScreenBorders.Left);
         }
-        else if (bordersToLimit.right && pos.x > borders.right)
+        else if (bordersToLimit.right && pos.x > bordersIn.right)
         {
-            transform.position = new Vector3(borders.right, transform.position.y);
-            onBorderReached.Invoke(ScreenBorders.Right);
+            transform.position = new Vector3(bordersIn.right, transform.position.y);
+            onBorderInReached.Invoke(ScreenBorders.Right);
         }
-        else if (bordersToLimit.bottom && pos.y < borders.bottom)
+        else if (bordersToLimit.bottom && pos.y < bordersIn.bottom)
         {
-            transform.position = new Vector3(transform.position.x, borders.bottom);
-            onBorderReached.Invoke(ScreenBorders.Bottom);
+            transform.position = new Vector3(transform.position.x, bordersIn.bottom);
+            onBorderInReached.Invoke(ScreenBorders.Bottom);
         }
-        else if (bordersToLimit.top && pos.y > borders.top)
+        else if (bordersToLimit.top && pos.y > bordersIn.top)
         {
-            transform.position = new Vector3(transform.position.x, borders.top);
-            onBorderReached.Invoke(ScreenBorders.Top);
+            transform.position = new Vector3(transform.position.x, bordersIn.top);
+            onBorderInReached.Invoke(ScreenBorders.Top);
         }
     }
+    private void CheckBoundOut()
+    {
+        var pos = transform.position;
+        if (!bordersToLimit.left && pos.x < bordersOut.left) onBorderOutReached.Invoke(ScreenBorders.Left);
+        else if (!bordersToLimit.right && pos.x > bordersOut.right) onBorderOutReached.Invoke(ScreenBorders.Right);
+        else if (!bordersToLimit.bottom && pos.y < bordersOut.bottom) onBorderOutReached.Invoke(ScreenBorders.Bottom);
+        else if (!bordersToLimit.top && pos.y > bordersOut.top) onBorderOutReached.Invoke(ScreenBorders.Top);
+    }
+
     private void SetScreenBoundPosition()
     {
         var cam = Camera.main;
@@ -54,12 +64,20 @@ public class LimitScreenBorders : MonoBehaviour
         var topRight = cam.ViewportToWorldPoint(new Vector3(1, 1, cam.nearClipPlane));
 
         var scale = transform.localScale;
-        borders = new Borders<float>()
+        bordersIn = new Borders<float>()
         {
             left = downLeft.x + (spriteRenderer.sprite.bounds.size.x * scale.x) / 2.0f,
             right = topRight.x - (spriteRenderer.sprite.bounds.size.x * scale.x) / 2.0f,
             bottom = downLeft.y + (spriteRenderer.sprite.bounds.size.y * scale.y) / 2.0f,
             top = topRight.y - (spriteRenderer.sprite.bounds.size.y * scale.y) / 2.0f
+        };
+
+        bordersOut = new Borders<float>()
+        {
+            left = downLeft.x - (spriteRenderer.sprite.bounds.size.x * scale.x) / 2.0f,
+            right = topRight.x + (spriteRenderer.sprite.bounds.size.x * scale.x) / 2.0f,
+            bottom = downLeft.y - (spriteRenderer.sprite.bounds.size.y * scale.y) / 2.0f,
+            top = topRight.y + (spriteRenderer.sprite.bounds.size.y * scale.y) / 2.0f
         };
     }
 

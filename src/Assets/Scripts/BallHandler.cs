@@ -25,11 +25,8 @@ public class BallHandler : MonoBehaviour
 
         var movement = speed * direction * Time.deltaTime;
         this.transform.Translate(movement);
-
-        if (Input.GetKeyDown(KeyCode.Space))
-            ResetBall(); // borrar
     }
-    public void OnBorderReached(ScreenBorders border)
+    public void OnBorderInReached(ScreenBorders border)
     {
         if (border == ScreenBorders.Top || border == ScreenBorders.Bottom)
             InvertYDirection();
@@ -57,7 +54,5 @@ public class BallHandler : MonoBehaviour
 
         var quarter = new Vector2(Random.value > 0.5f ? 1 : -1, Random.value > 0.5f ? 1 : -1);
         direction = MathHelpers.DegreeToVector2(Random.Range(5, 30)) * quarter;
-
-        print(direction);
     }
 }
