@@ -5,12 +5,12 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody2D))]
 public class BallHandler : MonoBehaviour
 {
-    private Vector3 _prevPosition;
     private Vector2 direction;
+    private bool isService;
 
     public float speed;
     public float maxAngle;
-    public UnityEvent<Vector2> onBallPositionChanged;
+    public UnityEvent onPlayerHited;
 
     private void Awake()
     {
@@ -18,41 +18,41 @@ public class BallHandler : MonoBehaviour
     }
     private void Update()
     {
-        if (_prevPosition != transform.position)
-            onBallPositionChanged.Invoke(transform.position);
-
-        _prevPosition = transform.position;
-
-        var movement = speed * direction * Time.deltaTime;
+        float speedFactor = isService ? 0.5f : 1;
+        var movement = speed * speedFactor * direction * Time.deltaTime;
         this.transform.Translate(movement);
     }
-    public void OnBorderInReached(ScreenBorders border)
+    public void InvertDirections(ScreenBorders border)
     {
         if (border == ScreenBorders.Top || border == ScreenBorders.Bottom)
             InvertYDirection();
         else
             InvertXDirection();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            direction = (transform.position - collision.transform.position).normalized;
-
-            Vector2 sign = new Vector2(Mathf.Sign(direction.x), Mathf.Sign(direction.y));
-            float currentAngle = Vector3.Angle(Vector3.right * sign, direction);
-            if (currentAngle > maxAngle)
-                direction = MathHelpers.DegreeToVector2(maxAngle) * sign;
-        }
-    }
-
     public void InvertXDirection() => direction.x *= -1;
     public void InvertYDirection() => direction.y *= -1;
     public void ResetBall()
     {
         transform.position = Vector3.zero;
+        isService = true;
 
         var quarter = new Vector2(Random.value > 0.5f ? 1 : -1, Random.value > 0.5f ? 1 : -1);
         direction = MathHelpers.DegreeToVector2(Random.Range(5, 30)) * quarter;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            direction = (transform.position - collision.transform.position).normalized;
+            isService = false;
+
+            Vector2 sign = new Vector2(Mathf.Sign(direction.x), Mathf.Sign(direction.y));
+            float currentAngle = Vector3.Angle(Vector3.right * sign, direction);
+            if (currentAngle > maxAngle)
+                direction = MathHelpers.DegreeToVector2(maxAngle) * sign;
+
+            onPlayerHited.Invoke();
+        }
     }
 }

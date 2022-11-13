@@ -131,7 +131,10 @@ MonoBehaviour:
     right: 0
     top: 1
     bottom: 1
-  onBorderReached:
+  onBorderInReached:
+    m_PersistentCalls:
+      m_Calls: []
+  onBorderOutReached:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &518706689555678559
@@ -147,3 +150,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerType: 0
+  score: 0

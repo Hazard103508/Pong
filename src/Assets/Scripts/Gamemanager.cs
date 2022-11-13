@@ -1,25 +1,41 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Gamemanager : MonoBehaviour
 {
-    public Scores scores;
-    public BallHandler ballHandler;
-    public Player player1;
-    public Player player2;
+    private int scorePS1;
+    private int scorePS2;
+    public int maxScore;
 
-    public void OnBorderOutReached(ScreenBorders screenBorders)
+    public UnityEvent<int> onPlayer1ScoreChanged;
+    public UnityEvent<int> onPlayer2ScoreChanged;
+    public UnityEvent onLoseGame;
+    public UnityEvent onWinGame;
+
+    public void IncreaseScore(ScreenBorders screenBorders)
     {
         if (screenBorders == ScreenBorders.Left)
         {
-            player1.score++;
-            scores.RefreshScorePlayer1(player1.score);
+            scorePS1++;
+            onPlayer1ScoreChanged.Invoke(scorePS1);
         }
         else if (screenBorders == ScreenBorders.Right)
         {
-            player2.score++;
-            scores.RefreshScorePlayer2(player2.score);
+            scorePS2++;
+            onPlayer2ScoreChanged.Invoke(scorePS2);
         }
 
-        ballHandler.ResetBall();
+        if (scorePS1 >= maxScore)
+            onWinGame.Invoke();
+        else if (scorePS2 >= maxScore)
+            onLoseGame.Invoke();
+    }
+    public void ResetScore()
+    {
+        scorePS1 = 0;
+        scorePS2 = 0;
+
+        onPlayer1ScoreChanged.Invoke(scorePS1);
+        onPlayer2ScoreChanged.Invoke(scorePS2);
     }
 }

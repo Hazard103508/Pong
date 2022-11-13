@@ -52,7 +52,10 @@ public class LimitScreenBorders : MonoBehaviour
     {
         var pos = transform.position;
         if (!bordersToLimit.left && pos.x < bordersOut.left) onBorderOutReached.Invoke(ScreenBorders.Left);
-        else if (!bordersToLimit.right && pos.x > bordersOut.right) onBorderOutReached.Invoke(ScreenBorders.Right);
+        else if (!bordersToLimit.right && pos.x > bordersOut.right)
+        {
+            onBorderOutReached.Invoke(ScreenBorders.Right);
+        }
         else if (!bordersToLimit.bottom && pos.y < bordersOut.bottom) onBorderOutReached.Invoke(ScreenBorders.Bottom);
         else if (!bordersToLimit.top && pos.y > bordersOut.top) onBorderOutReached.Invoke(ScreenBorders.Top);
     }
