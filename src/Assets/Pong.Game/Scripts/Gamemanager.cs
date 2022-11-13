@@ -1,4 +1,5 @@
 using Pong.Common.Behaviours;
+using Pong.Game.Settings;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,6 +15,12 @@ namespace Pong.Game
         public UnityEvent<int> onPlayer2ScoreChanged;
         public UnityEvent onLoseGame;
         public UnityEvent onWinGame;
+
+        private void Awake()
+        {
+            print(GameSettings.Difficulty);
+            print(GameSettings.Input);
+        }
 
         public void IncreaseScore(ScreenBorders screenBorders)
         {

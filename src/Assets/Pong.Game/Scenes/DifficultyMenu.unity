@@ -182,6 +182,18 @@ MonoBehaviour:
           m_StringArgument: Pong
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 209861289}
+        m_TargetAssemblyTypeName: Pong.Game.Settings.GameSettingsHandler, Assembly-CSharp
+        m_MethodName: SetDifficulty_Hard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &209861286
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 209861287}
   - component: {fileID: 209861288}
+  - component: {fileID: 209861289}
   m_Layer: 0
   m_Name: Gamemanager
   m_TagString: Untagged
@@ -226,6 +239,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2319fb3ee598ab04abe55f63d6a63936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &209861289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209861286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca2750ca347a6b44946825d9742aef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &291272861
@@ -285,6 +310,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Pong
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 209861289}
+        m_TargetAssemblyTypeName: Pong.Game.Settings.GameSettingsHandler, Assembly-CSharp
+        m_MethodName: SetDifficulty_Medium
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &403797645
@@ -428,6 +465,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Pong
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 209861289}
+        m_TargetAssemblyTypeName: Pong.Game.Settings.GameSettingsHandler, Assembly-CSharp
+        m_MethodName: SetDifficulty_Easy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &513242602
@@ -734,7 +783,7 @@ PrefabInstance:
     - target: {fileID: 3728308245857742907, guid: cc797f0d364f7fa44bf546c91b4d32c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 291272863}
+      objectReference: {fileID: 59586833}
     - target: {fileID: 3728308245857742907, guid: cc797f0d364f7fa44bf546c91b4d32c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2

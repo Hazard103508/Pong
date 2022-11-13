@@ -11,6 +11,7 @@ namespace Pong.Game
     {
         private Vector2 direction;
         private bool isService;
+        private float serviceSide;
 
         public float speed;
         public float maxAngle;
@@ -18,6 +19,7 @@ namespace Pong.Game
 
         private void Awake()
         {
+            serviceSide = Random.value > 0.5f ? 1 : -1;
             ResetBall();
         }
         private void Update()
@@ -40,7 +42,7 @@ namespace Pong.Game
             transform.position = Vector3.zero;
             isService = true;
 
-            var quarter = new Vector2(Random.value > 0.5f ? 1 : -1, Random.value > 0.5f ? 1 : -1);
+            var quarter = new Vector2(serviceSide *= -1, Random.value > 0.5f ? 1 : -1);
             direction = MathHelpers.DegreeToVector2(Random.Range(5, 30)) * quarter;
         }
 
