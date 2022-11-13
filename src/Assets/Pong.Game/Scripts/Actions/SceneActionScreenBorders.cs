@@ -1,6 +1,7 @@
+using Pong.Common.Actions;
 using Pong.Common.Behaviours;
 
-namespace Pong.Common.Actions
+namespace Pong.Game.Actions
 {
     public class SceneActionScreenBorders : SceneActionGeneric<ScreenBorders>
     {

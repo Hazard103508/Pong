@@ -914,7 +914,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onInvoke:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2124948435}
+        m_TargetAssemblyTypeName: Pong.Common.Behaviours.SceneHandler, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &475650596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,7 +1684,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37555dbdea34b9642b145df4ef74c6cd, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3302,6 +3314,7 @@ GameObject:
   - component: {fileID: 2124948433}
   - component: {fileID: 2124948432}
   - component: {fileID: 2124948434}
+  - component: {fileID: 2124948435}
   m_Layer: 0
   m_Name: Gamemanager
   m_TagString: Untagged
@@ -3321,7 +3334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838c1245ddc01b54f8b974d880ebee3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxScore: 2
+  maxScore: 10
   onPlayer1ScoreChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3410,6 +3423,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbd91dfd1d04afc43bb9607e810acd43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2124948435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124948431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2319fb3ee598ab04abe55f63d6a63936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &518706689488008687
