@@ -1,3 +1,4 @@
+using Pong.Game.Settings;
 using UnityEngine;
 
 namespace Pong.Game.Inputs
@@ -6,6 +7,10 @@ namespace Pong.Game.Inputs
     {
         public float speed;
 
+        private void Awake()
+        {
+            this.enabled = GameSettings.Input == InputTypes.Keyboard;
+        }
         void Update()
         {
             float factor = Input.GetAxisRaw("Vertical");

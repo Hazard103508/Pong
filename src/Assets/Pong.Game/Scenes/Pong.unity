@@ -336,7 +336,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68743341}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2507f9df9128a104eb9b5e85aa48f06d, type: 3}
   m_Name: 
@@ -708,7 +708,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 439870082}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &221171708
 MonoBehaviour:
@@ -859,8 +859,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 923684793}
-  - {fileID: 1362833635}
   - {fileID: 812567171}
   - {fileID: 221171707}
   - {fileID: 1451594815}
@@ -898,7 +896,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 439870082}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &460174876
 MonoBehaviour:
@@ -925,6 +923,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2124948434}
+        m_TargetAssemblyTypeName: Pong.Common.Behaviours.PauseHandler, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &475650596
@@ -1540,7 +1550,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 922079210}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &642259606
 MonoBehaviour:
@@ -2052,7 +2062,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 439870082}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &812567172
 MonoBehaviour:
@@ -2111,6 +2121,8 @@ Transform:
   m_Children:
   - {fileID: 1273287156}
   - {fileID: 757448766}
+  - {fileID: 923684793}
+  - {fileID: 1362833635}
   - {fileID: 1192538073}
   - {fileID: 642259605}
   m_Father: {fileID: 1944677927}
@@ -2127,7 +2139,7 @@ GameObject:
   - component: {fileID: 923684793}
   - component: {fileID: 923684794}
   m_Layer: 0
-  m_Name: OpenWinPanel
+  m_Name: OnWinGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2145,8 +2157,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 439870082}
-  m_RootOrder: 0
+  m_Father: {fileID: 922079210}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &923684794
 MonoBehaviour:
@@ -2274,7 +2286,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 922079210}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1192538074
 MonoBehaviour:
@@ -2553,7 +2565,7 @@ GameObject:
   - component: {fileID: 1362833635}
   - component: {fileID: 1362833636}
   m_Layer: 0
-  m_Name: OpenLosePanel
+  m_Name: OnLoseGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2571,8 +2583,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 439870082}
-  m_RootOrder: 1
+  m_Father: {fileID: 922079210}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1362833636
 MonoBehaviour:
@@ -2730,7 +2742,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 439870082}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1598926915
 GameObject:
@@ -2939,7 +2951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b69290beb7ec024bb620b246a262ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 18
   target: {fileID: 672599980}
 --- !u!1 &1713888506
 GameObject:

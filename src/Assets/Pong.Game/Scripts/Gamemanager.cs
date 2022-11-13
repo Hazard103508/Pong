@@ -1,4 +1,5 @@
 using Pong.Common.Behaviours;
+using Pong.Game.Inputs;
 using Pong.Game.Settings;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,6 +10,7 @@ namespace Pong.Game
     {
         private int scorePS1;
         private int scorePS2;
+
         public int maxScore;
 
         public UnityEvent<int> onPlayer1ScoreChanged;
@@ -18,8 +20,8 @@ namespace Pong.Game
 
         private void Awake()
         {
-            print(GameSettings.Difficulty);
-            print(GameSettings.Input);
+            //print(GameSettings.Difficulty);
+            //print(GameSettings.Input);
         }
 
         public void IncreaseScore(ScreenBorders screenBorders)
