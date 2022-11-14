@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Pong.Game/Scenes/MainMenu.unity
+    guid: 383a798874cd99046b2149478aed3da8
+  - enabled: 1
+    path: Assets/Pong.Game/Scenes/InputMenu.unity
+    guid: cc35466af299f4c4f912b718ff6ad259
+  - enabled: 1
+    path: Assets/Pong.Game/Scenes/DifficultyMenu.unity
+    guid: f48e7c65994b881448d2336b3645f7d1
+  - enabled: 1
+    path: Assets/Pong.Game/Scenes/Pong.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
