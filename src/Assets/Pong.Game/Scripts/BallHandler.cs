@@ -13,9 +13,12 @@ namespace Pong.Game
         private bool isService;
         private float serviceSide;
 
+        public bool turbo;
         public float speed;
         public float maxAngle;
         public UnityEvent onPlayerHited;
+
+        public string LastPlayerHited { get; private set; }
 
         private void Awake()
         {
@@ -41,15 +44,19 @@ namespace Pong.Game
         {
             transform.position = Vector3.zero;
             isService = true;
+            SetTurbo(false);
 
             var quarter = new Vector2(serviceSide *= -1, Random.value > 0.5f ? 1 : -1);
             direction = MathHelpers.DegreeToVector2(Random.Range(5, 30)) * quarter;
         }
+        public void SetTurbo(bool isTurbo) => this.turbo = isTurbo;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.tag == "Player")
             {
+                LastPlayerHited = collision.gameObject.name;
+
                 isService = false;
 
                 var sizeY = collision.transform.localScale.y / 2;
@@ -63,6 +70,9 @@ namespace Pong.Game
 
                 var signX = Mathf.Sign(direction.x);
                 direction = MathHelpers.DegreeToVector2(angle).normalized * new Vector2(-signX, 1);
+
+                if (turbo)
+                    direction *= 1.5f;
 
                 onPlayerHited.Invoke();
             }

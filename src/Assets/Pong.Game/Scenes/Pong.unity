@@ -1790,6 +1790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743bd4ee9d6371642a0ac58fabb51859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turbo: 0
   speed: 40
   maxAngle: 60
   onPlayerHited:
@@ -2091,6 +2092,144 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &902096693
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1310070350}
+    m_Modifications:
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer1Hited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer2Hited.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer1Hited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer2Hited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer1Hited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1547880997}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer2Hited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1158749383}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer1Hited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer2Hited.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer1Hited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Invoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer2Hited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Invoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer1Hited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pong.Common.Actions.SceneAction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer2Hited.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pong.Common.Actions.SceneAction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer1Hited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: onPlayer2Hited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193980487644365058, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_Name
+      value: PowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+--- !u!4 &902096694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3355727272091064583, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+  m_PrefabInstance: {fileID: 902096693}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &902096695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2152331055304820608, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+  m_PrefabInstance: {fileID: 902096693}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902096696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d7834220d76403458ce1284dd8675e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &902096696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3193980487644365058, guid: 1cda9acbdd3540944a2e2a2bb10a28e9, type: 3}
+  m_PrefabInstance: {fileID: 902096693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &922079209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,6 +2264,9 @@ Transform:
   - {fileID: 1362833635}
   - {fileID: 1192538073}
   - {fileID: 642259605}
+  - {fileID: 1431684093}
+  - {fileID: 1547880996}
+  - {fileID: 1158749382}
   m_Father: {fileID: 1944677927}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2256,6 +2398,77 @@ Transform:
   m_Father: {fileID: 2124948433}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1158749381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158749382}
+  - component: {fileID: 1158749383}
+  m_Layer: 0
+  m_Name: ApplyPowerUpPlayer2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1158749382
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158749381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 922079210}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1158749383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158749381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694cb39ecf9fa4a43b527b9e817082ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInvoke:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1710334016}
+        m_TargetAssemblyTypeName: Pong.Game.PlayerHandler, Assembly-CSharp
+        m_MethodName: ApplyPoweUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 672599987}
+        m_TargetAssemblyTypeName: Pong.Game.BallHandler, Assembly-CSharp
+        m_MethodName: SetTurbo
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1192538072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2480,6 +2693,7 @@ Transform:
   - {fileID: 68743342}
   - {fileID: 1710334013}
   - {fileID: 672599980}
+  - {fileID: 1310070350}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2545,6 +2759,93 @@ MonoBehaviour:
       - m_Target: {fileID: 672599987}
         m_TargetAssemblyTypeName: BallHandler, Assembly-CSharp
         m_MethodName: ResetBall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 518706689488008688}
+        m_TargetAssemblyTypeName: Pong.Game.PlayerHandler, Assembly-CSharp
+        m_MethodName: RemovePowerUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1710334016}
+        m_TargetAssemblyTypeName: Pong.Game.PlayerHandler, Assembly-CSharp
+        m_MethodName: RemovePowerUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1310070349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1310070350}
+  - component: {fileID: 1310070351}
+  m_Layer: 0
+  m_Name: PowerHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1310070350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310070349}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 902096694}
+  m_Father: {fileID: 1273121100}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1310070351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310070349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a54a5801fdda95f45a72e260fdbb9393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayStartTimeSeconds: 3
+  minTimeSeconds: 10
+  maxTimeSeconds: 20
+  onActionStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1431684094}
+        m_TargetAssemblyTypeName: Pong.Common.Actions.SceneAction, Assembly-CSharp
+        m_MethodName: Invoke
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2649,6 +2950,77 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1431684092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431684093}
+  - component: {fileID: 1431684094}
+  m_Layer: 0
+  m_Name: ThrowPowerUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431684093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431684092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 922079210}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1431684094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431684092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694cb39ecf9fa4a43b527b9e817082ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInvoke:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 902096696}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 902096695}
+        m_TargetAssemblyTypeName: Pong.Game.PowerUp, Assembly-CSharp
+        m_MethodName: ResetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1451594813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,6 +3101,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 518706689488008688}
+        m_TargetAssemblyTypeName: Pong.Game.PlayerHandler, Assembly-CSharp
+        m_MethodName: RemovePowerUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1710334016}
+        m_TargetAssemblyTypeName: Pong.Game.PlayerHandler, Assembly-CSharp
+        m_MethodName: RemovePowerUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1451594815
 Transform:
   m_ObjectHideFlags: 0
@@ -2744,6 +3140,77 @@ Transform:
   m_Father: {fileID: 439870082}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1547880995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1547880996}
+  - component: {fileID: 1547880997}
+  m_Layer: 0
+  m_Name: ApplyPowerUpPlayer1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1547880996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547880995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 922079210}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1547880997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547880995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694cb39ecf9fa4a43b527b9e817082ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInvoke:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 518706689488008688}
+        m_TargetAssemblyTypeName: Pong.Game.PlayerHandler, Assembly-CSharp
+        m_MethodName: ApplyPoweUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 672599987}
+        m_TargetAssemblyTypeName: Pong.Game.BallHandler, Assembly-CSharp
+        m_MethodName: SetTurbo
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1598926915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,6 +3331,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 518706689555678529, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 518706689555678529, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
       objectReference: {fileID: 0}
@@ -2915,6 +3386,10 @@ PrefabInstance:
       propertyPath: playerType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1992003513470729844, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
+      propertyPath: limitScreenBorders
+      value: 
+      objectReference: {fileID: 1710334018}
     - target: {fileID: 4418579059591548996, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
       propertyPath: initPosition.x
       value: 0.05
@@ -2953,6 +3428,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 18
   target: {fileID: 672599980}
+--- !u!114 &1710334016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1992003513470729844, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
+  m_PrefabInstance: {fileID: 1710334012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710334014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90387bab6b30f5249885f4babdf962d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1710334018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 518706689555678557, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
+  m_PrefabInstance: {fileID: 1710334012}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710334014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ef763fcd9cd264db53e13314dc5654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1713888506
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,6 +3966,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 518706689555678529, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 518706689555678529, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20
       objectReference: {fileID: 0}
@@ -3512,6 +4013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 1992003513470729844, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
+      propertyPath: limitScreenBorders
+      value: 
+      objectReference: {fileID: 518706689488008690}
     - target: {fileID: 4418579059591548996, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
       propertyPath: initPosition.x
       value: 0.95
@@ -3527,6 +4032,28 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 518706689555678559, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
+--- !u!114 &518706689488008688 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1992003513470729844, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
+  m_PrefabInstance: {fileID: 518706689488008687}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68743341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90387bab6b30f5249885f4babdf962d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &518706689488008690 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 518706689555678557, guid: 427e7496da1b03149a6236f2711aa6e9, type: 3}
+  m_PrefabInstance: {fileID: 518706689488008687}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68743341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ef763fcd9cd264db53e13314dc5654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3728308246791737257
 PrefabInstance:
   m_ObjectHideFlags: 0

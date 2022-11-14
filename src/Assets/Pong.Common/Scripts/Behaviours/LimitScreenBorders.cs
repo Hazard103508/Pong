@@ -62,7 +62,7 @@ namespace Pong.Common.Behaviours
             else if (!bordersToLimit.top && pos.y > bordersOut.top) onBorderOutReached.Invoke(ScreenBorders.Top);
         }
 
-        private void SetScreenBoundPosition()
+        public void SetScreenBoundPosition()
         {
             var cam = Camera.main;
             var downLeft = cam.ViewportToWorldPoint(new Vector3(0, 0, cam.nearClipPlane));
