@@ -1,6 +1,6 @@
 namespace Pong.Game.Settings
 {
-    public enum InputTypes 
+    public enum InputTypes
     {
         Keyboard,
         Mouse

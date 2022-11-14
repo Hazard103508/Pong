@@ -1,7 +1,5 @@
 using Pong.Game.Settings;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Pong.Game.Inputs
 {
@@ -12,8 +10,8 @@ namespace Pong.Game.Inputs
 
         private void Awake()
         {
-            speed *= 
-                GameSettings.Difficulty == DifficultyTypes.Easy ? 1f:
+            speed *=
+                GameSettings.Difficulty == DifficultyTypes.Easy ? 1f :
                 GameSettings.Difficulty == DifficultyTypes.Medium ? 1.2f :
                 1.4f;
         }

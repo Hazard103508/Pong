@@ -1,6 +1,4 @@
 using Pong.Common.Behaviours;
-using Pong.Game.Inputs;
-using Pong.Game.Settings;
 using UnityEngine;
 using UnityEngine.Events;
 

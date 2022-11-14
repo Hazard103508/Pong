@@ -1,7 +1,7 @@
-using UnityEngine;
-using UnityEngine.Events;
 using Pong.Common.Behaviours;
 using Pong.Common.Helpers;
+using UnityEngine;
+using UnityEngine.Events;
 
 namespace Pong.Game
 {
@@ -46,17 +46,23 @@ namespace Pong.Game
             direction = MathHelpers.DegreeToVector2(Random.Range(5, 30)) * quarter;
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.CompareTag("Player"))
+            if (collision.gameObject.tag == "Player")
             {
-                direction = (transform.position - collision.transform.position).normalized;
                 isService = false;
 
-                Vector2 sign = new Vector2(Mathf.Sign(direction.x), Mathf.Sign(direction.y));
-                float currentAngle = Vector3.Angle(Vector3.right * sign, direction);
-                if (currentAngle > maxAngle)
-                    direction = MathHelpers.DegreeToVector2(maxAngle) * sign;
+                var sizeY = collision.transform.localScale.y / 2;
+                var playerPosY = collision.transform.position.y;
+
+                var hitPointY = this.transform.position.y;
+                var relativeHitPointY = hitPointY - playerPosY;
+                var hitLocationFactor = Mathf.Clamp(relativeHitPointY / sizeY, -1, 1 );
+
+                float angle = maxAngle * hitLocationFactor;
+
+                var signX = Mathf.Sign(direction.x);
+                direction = MathHelpers.DegreeToVector2(angle).normalized * new Vector2(-signX, 1);
 
                 onPlayerHited.Invoke();
             }
